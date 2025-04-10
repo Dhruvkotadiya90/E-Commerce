@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="page2.html">
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" onclick="document.location='page2.html'">Login</button>
+                    <p class="toggle-form">Don't have an account? <span id="show-register">Register</span></p>
+                </form>
+            </div>
+            <div class="form-box register">
+                <h2>Register</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" onclick="document.location='page2.html'">Register</button>
+                    <p class="toggle-form">Already have an account? <span id="show-login">Login</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginBox = document.querySelector('.login');
+        const registerBox = document.querySelector('.register');
+        const showRegister = document.getElementById('show-register');
+        const showLogin = document.getElementById('show-login');
+
+        showRegister.addEventListener('click', () => {
+            loginBox.style.display = 'none';
+            registerBox.style.display = 'block';
+        });
+
+        showLogin.addEventListener('click', () => {
+            registerBox.style.display = 'none';
+            loginBox.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
