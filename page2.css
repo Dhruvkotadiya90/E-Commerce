@@ -324,3 +324,8 @@ footer {
   justify-content: start;
   margin: 20px 0 0 20px;
 }
+
+.nav-item-dropdown{
+  font-size: x-large;
+}
+  
